@@ -82,6 +82,4 @@ test:
 #
 production:
   <<: *default
-  database: BlockbusterCloneFOV_production
-  username: BlockbusterCloneFOV
-  password: <%= ENV["BLOCKBUSTERCLONEFOV_DATABASE_PASSWORD"] %>
+  url: <%= ENV['DATABASE_URL'] %>

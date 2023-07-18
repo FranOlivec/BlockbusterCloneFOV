@@ -10,23 +10,25 @@
       </ul>
     </div>
   <% end %>
+ <div class="container">
+    <div class="form-group">
+      <%= form.label :name, 'Nombre del Cliente',  style: "display: block" %>
+      <%= form.text_field :name, class: "form-control"%>
+    </div>
 
-  <div>
-    <%= form.label :name, style: "display: block" %>
-    <%= form.text_field :name %>
-  </div>
+    <div class="form-group">
+      <%= form.label :age, 'Edad', style: "display: block" %>
+      <%= form.text_field :age, class: "form-control" %>
+    </div>
 
-  <div>
-    <%= form.label :age, style: "display: block" %>
-    <%= form.text_field :age %>
-  </div>
+    <div class="form-group">
+      <%= form.label :direction, 'Dirección', style: "display: block" %>
+      <%= form.text_field :direction, class: "form-control" %>
+    </div>
 
-  <div>
-    <%= form.label :direction, style: "display: block" %>
-    <%= form.text_field :direction %>
-  </div>
-
-  <div>
-    <%= form.submit %>
-  </div>
+    <div>
+      <%= form.submit 'Guardar Cliente', class:"btn btn-success mt-3" %>
+    </div>
+ </div>
+ 
 <% end %>

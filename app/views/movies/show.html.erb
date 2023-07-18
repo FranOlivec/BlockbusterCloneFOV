@@ -1,10 +1,23 @@
 <p style="color: green"><%= notice %></p>
-
+<br>
+<br>
+<h1>Detalle Películas</h1>
+<br>
 <%= render @movie %>
 
 <div>
-  <%= link_to "Edit this movie", edit_movie_path(@movie) %> |
-  <%= link_to "Back to movies", movies_path %>
-
-  <%= button_to "Destroy this movie", @movie, method: :delete %>
+  <div class="container">
+    <div class="row">
+      <div class="col-10">
+        <%= link_to "Editar Película", edit_movie_path(@movie), class:"btn btn-success mt-2"%> |
+        <%= link_to "Volver a Películas", movies_path, class:"btn btn-primary mt-2" %>
+      </div>
+    </div>
+  </div>
+  
+  
+  <div class="container">
+    <%= button_to "Eliminar Película", @movie, method: :delete, class:"btn btn-danger mt-2 mb-5"%>  
+  </div>
+ 
 </div>
